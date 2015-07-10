@@ -29,7 +29,7 @@ module.exports = function(content) {
   var image = sizeOf(this.resourcePath);
 
   image.src = this.options.output.publicPath
-    ? path.join(this.options.output.publicPath, url)
+    ? this.options.output.publicPath + url
     : url;
 
   image.bytes = fs.statSync(this.resourcePath).size;
